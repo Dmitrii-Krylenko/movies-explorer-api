@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const cors = require('cors');
+require('dotenv').config();
 
 const { PORT = 3000 } = process.env;
 const errorHandler = require('./middlewares/errorhandler');
@@ -10,7 +11,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { routes } = require('./routes');
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:3000/', credentials: true }));
+app.use(cors({ origin: 'https://api.korolekdiplom.nomoredomainsicu.ru/', credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(requestLogger);
