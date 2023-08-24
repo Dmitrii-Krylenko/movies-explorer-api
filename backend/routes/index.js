@@ -10,7 +10,7 @@ routes.use('/', userPublicRouter);
 
 routes.use('/movies', auth, movieRouter);
 routes.use('/users', auth, usersRouter);
-routes.use('*', (req, res, next) => next(
+routes.use('*', auth, (req, res, next) => next(
   new NotFound('Страница не найдена.'),
 ));
 
