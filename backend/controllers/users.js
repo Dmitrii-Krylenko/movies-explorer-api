@@ -55,7 +55,7 @@ module.exports.updateUser = (req, res, next) => {
         );
       }
       if (err.code === 11000) {
-        return next(new BadRequest('Пользователь с таким email уже сущестрвует.'));
+        return next(new Conflict('Пользователь с таким email уже сущестрвует.'));
       }
       return next(err);
     });
