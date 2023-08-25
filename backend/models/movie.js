@@ -18,6 +18,10 @@ const moviesSchema = new mongoose.Schema({
     type: String, // год выпуска — это строка
     required: true, // оно должно быть
   },
+  description: { //   описание фильма. Обязательное поле-строка.
+    type: String, // год выпуска — это строка
+    required: true, // оно должно быть
+  },
   image: { //  ссылка на постер к фильму. Обязательное поле-строка. Запишите её URL-адресом.
     type: String, // имя — это строка
     required: true, // оно должно быть
