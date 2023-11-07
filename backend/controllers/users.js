@@ -82,8 +82,7 @@ module.exports.login = (req, res, next) => {
           const options = {
             maxAge: 1000 * 60 * 60 * 24 * 7,
             httpOnly: true,
-            sameSite: 'none',
-            secure: false,
+
           };
           res.cookie('loginedUserToken', token, options);
           // аутентификация успешна

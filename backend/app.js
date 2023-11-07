@@ -11,7 +11,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { routes } = require('./routes');
 
 const app = express();
-app.use(cors({ origin: ['http://localhost:3000', 'https://api.korolekdiplom.nomoredomainsicu.ru', 'http://api.korolekdiplom.nomoredomainsicu.ru'], credentials: true }));
+app.use(cors({ origin: ['http://localhost:3000', 'https://api.korolekdiplom.nomoredomainsicu.ru', 'http://api.korolekdiplom.nomoredomainsicu.ru', 'http://korolekdiplom.nomoredomainsicu.ru', 'https://korolekdiplom.nomoredomainsicu.ru'], credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(requestLogger);
